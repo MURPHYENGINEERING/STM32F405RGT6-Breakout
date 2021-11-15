@@ -646,4 +646,95 @@ Text GLabel 5550 2900 0    50   Input ~ 0
 BOOT0
 Text GLabel 6950 4600 2    50   Input ~ 0
 BOOT1
+Text GLabel 5550 3900 0    50   Input ~ 0
+HSE_IN
+Text GLabel 5550 4000 0    50   Input ~ 0
+HSE_OUT
+$Comp
+L Device:Crystal_GND24_Small HSE?
+U 1 1 619D5B8C
+P 3800 4400
+F 0 "HSE?" H 3950 4850 50  0000 L CNN
+F 1 "16MHz" H 3950 4750 50  0000 L CNN
+F 2 "" H 3800 4400 50  0001 C CNN
+F 3 "~" H 3800 4400 50  0001 C CNN
+	1    3800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619D8425
+P 3800 4650
+F 0 "#PWR?" H 3800 4400 50  0001 C CNN
+F 1 "GND" H 3805 4477 50  0000 C CNN
+F 2 "" H 3800 4650 50  0001 C CNN
+F 3 "" H 3800 4650 50  0001 C CNN
+	1    3800 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 4400 2    50   Input ~ 0
+HSE_OUT
+$Comp
+L Device:R_Small R?
+U 1 1 619D92E6
+P 4400 4400
+F 0 "R?" V 4204 4400 50  0000 C CNN
+F 1 "R_Small" V 4295 4400 50  0000 C CNN
+F 2 "" H 4400 4400 50  0001 C CNN
+F 3 "~" H 4400 4400 50  0001 C CNN
+	1    4400 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 4400 4150 4400
+$Comp
+L Device:C_Small C?
+U 1 1 619DB81B
+P 4150 4550
+F 0 "C?" H 4242 4596 50  0000 L CNN
+F 1 "2.2u" H 4242 4505 50  0000 L CNN
+F 2 "" H 4150 4550 50  0001 C CNN
+F 3 "~" H 4150 4550 50  0001 C CNN
+	1    4150 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4450 4150 4400
+Connection ~ 4150 4400
+Wire Wire Line
+	3800 4300 3800 4200
+Wire Wire Line
+	3800 4200 3950 4200
+Wire Wire Line
+	3950 4200 3950 4650
+Wire Wire Line
+	3950 4650 3800 4650
+Wire Wire Line
+	3900 4400 4150 4400
+Wire Wire Line
+	3950 4650 4150 4650
+Connection ~ 3950 4650
+Connection ~ 3800 4650
+Wire Wire Line
+	3450 4400 3700 4400
+Connection ~ 3450 4400
+Wire Wire Line
+	3450 4450 3450 4400
+Wire Wire Line
+	3450 4650 3800 4650
+Wire Wire Line
+	3400 4400 3450 4400
+$Comp
+L Device:C_Small C?
+U 1 1 619DBEC1
+P 3450 4550
+F 0 "C?" H 3250 4600 50  0000 L CNN
+F 1 "2.2u" H 3200 4500 50  0000 L CNN
+F 2 "" H 3450 4550 50  0001 C CNN
+F 3 "~" H 3450 4550 50  0001 C CNN
+	1    3450 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 4400 0    50   Input ~ 0
+HSE_IN
 $EndSCHEMATC

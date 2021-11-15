@@ -650,4 +650,105 @@ Text GLabel 5550 3900 0    50   Input ~ 0
 HSE_IN
 Text GLabel 5550 4000 0    50   Input ~ 0
 HSE_OUT
+$Comp
+L Device:Crystal_GND24_Small HSE?
+U 1 1 619D5B8C
+P 3800 4400
+F 0 "HSE?" H 3450 4600 50  0000 L CNN
+F 1 "16MHz" H 3450 4500 50  0000 L CNN
+F 2 "" H 3800 4400 50  0001 C CNN
+F 3 "~" H 3800 4400 50  0001 C CNN
+	1    3800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619D8425
+P 3800 4650
+F 0 "#PWR?" H 3800 4400 50  0001 C CNN
+F 1 "GND" H 3805 4477 50  0000 C CNN
+F 2 "" H 3800 4650 50  0001 C CNN
+F 3 "" H 3800 4650 50  0001 C CNN
+	1    3800 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4350 4400 2    50   Input ~ 0
+HSE_OUT
+$Comp
+L Device:R_Small R?
+U 1 1 619D92E6
+P 4250 4400
+F 0 "R?" V 4054 4400 50  0000 C CNN
+F 1 "220" V 4145 4400 50  0000 C CNN
+F 2 "" H 4250 4400 50  0001 C CNN
+F 3 "~" H 4250 4400 50  0001 C CNN
+	1    4250 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 4400 4100 4400
+$Comp
+L Device:C_Small C?
+U 1 1 619DB81B
+P 4100 4550
+F 0 "C?" H 4192 4596 50  0000 L CNN
+F 1 "12p" H 4192 4505 50  0000 L CNN
+F 2 "" H 4100 4550 50  0001 C CNN
+F 3 "~" H 4100 4550 50  0001 C CNN
+	1    4100 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4450 4100 4400
+Connection ~ 4100 4400
+Wire Wire Line
+	3800 4300 3800 4250
+Wire Wire Line
+	3800 4250 3950 4250
+Wire Wire Line
+	3950 4250 3950 4650
+Wire Wire Line
+	3950 4650 3800 4650
+Wire Wire Line
+	3900 4400 4100 4400
+Wire Wire Line
+	3950 4650 4100 4650
+Connection ~ 3950 4650
+Connection ~ 3800 4650
+Wire Wire Line
+	3500 4400 3700 4400
+Connection ~ 3500 4400
+Wire Wire Line
+	3500 4450 3500 4400
+Wire Wire Line
+	3500 4650 3800 4650
+Wire Wire Line
+	3450 4400 3500 4400
+$Comp
+L Device:C_Small C?
+U 1 1 619DBEC1
+P 3500 4550
+F 0 "C?" H 3300 4600 50  0000 L CNN
+F 1 "12p" H 3250 4500 50  0000 L CNN
+F 2 "" H 3500 4550 50  0001 C CNN
+F 3 "~" H 3500 4550 50  0001 C CNN
+	1    3500 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 3450 4400 0    50   Input ~ 0
+HSE_IN
+Wire Wire Line
+	3800 4500 3800 4650
+Text Notes 3050 5150 0    50   ~ 0
+Cl = 2 * (CLOAD_CRYSTAL - CPARASITIC)\n     = 2 * (9p - 2p)\n     = 14p ~~ 12p
+Wire Notes Line
+	4800 5200 3000 5200
+Wire Notes Line
+	3000 4100 4800 4100
+Wire Notes Line
+	3000 4100 3000 5200
+Wire Notes Line
+	4800 4100 4800 5200
+Text Notes 3000 4050 0    50   ~ 0
+"High" speed crystal oscillator
 $EndSCHEMATC
