@@ -228,4 +228,155 @@ Wire Notes Line
 	650  750  4650 750 
 Text Notes 700  700  0    50   ~ 0
 Input voltage regulator
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61974FD8
+P 6050 2400
+F 0 "#PWR?" H 6050 2250 50  0001 C CNN
+F 1 "+3V3" H 6065 2573 50  0000 C CNN
+F 2 "" H 6050 2400 50  0001 C CNN
+F 3 "" H 6050 2400 50  0001 C CNN
+	1    6050 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2500 6450 2450
+Wire Wire Line
+	6450 2450 6350 2450
+Wire Wire Line
+	6350 2450 6350 2500
+Wire Wire Line
+	6350 2450 6250 2450
+Wire Wire Line
+	6050 2450 6050 2500
+Connection ~ 6350 2450
+Wire Wire Line
+	6150 2450 6150 2500
+Connection ~ 6150 2450
+Wire Wire Line
+	6150 2450 6050 2450
+Wire Wire Line
+	6250 2450 6250 2500
+Connection ~ 6250 2450
+Wire Wire Line
+	6250 2450 6150 2450
+Wire Wire Line
+	6050 2450 6050 2400
+Connection ~ 6050 2450
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6197E4D1
+P 7250 950
+F 0 "#PWR?" H 7250 800 50  0001 C CNN
+F 1 "+3V3" H 7265 1123 50  0000 C CNN
+F 2 "" H 7250 950 50  0001 C CNN
+F 3 "" H 7250 950 50  0001 C CNN
+	1    7250 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 6197F29F
+P 7700 1100
+F 0 "FB?" V 7463 1100 50  0000 C CNN
+F 1 "100 @ 100 MHz" V 7554 1100 50  0000 C CNN
+F 2 "" V 7630 1100 50  0001 C CNN
+F 3 "~" H 7700 1100 50  0001 C CNN
+	1    7700 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 6197FBF2
+P 7950 1300
+F 0 "C?" H 8042 1346 50  0000 L CNN
+F 1 "100n" H 8042 1255 50  0000 L CNN
+F 2 "" H 7950 1300 50  0001 C CNN
+F 3 "~" H 7950 1300 50  0001 C CNN
+	1    7950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61980239
+P 8350 1300
+F 0 "C?" H 8442 1346 50  0000 L CNN
+F 1 "10n" H 8442 1255 50  0000 L CNN
+F 2 "" H 8350 1300 50  0001 C CNN
+F 3 "~" H 8350 1300 50  0001 C CNN
+	1    8350 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1200 8350 1100
+Wire Wire Line
+	8350 1100 7950 1100
+Wire Wire Line
+	7950 1200 7950 1100
+Connection ~ 7950 1100
+Wire Wire Line
+	7950 1100 7800 1100
+Wire Wire Line
+	7250 950  7250 1100
+Wire Wire Line
+	7250 1100 7600 1100
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 61983E43
+P 6550 2400
+F 0 "#PWR?" H 6550 2250 50  0001 C CNN
+F 1 "+3.3VA" H 6565 2573 50  0000 C CNN
+F 2 "" H 6550 2400 50  0001 C CNN
+F 3 "" H 6550 2400 50  0001 C CNN
+	1    6550 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2400 6550 2500
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 61985D6F
+P 8350 950
+F 0 "#PWR?" H 8350 800 50  0001 C CNN
+F 1 "+3.3VA" H 8365 1123 50  0000 C CNN
+F 2 "" H 8350 950 50  0001 C CNN
+F 3 "" H 8350 950 50  0001 C CNN
+	1    8350 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 950  8350 1100
+Connection ~ 8350 1100
+$Comp
+L power:GND #PWR?
+U 1 1 6198711A
+P 7950 1400
+F 0 "#PWR?" H 7950 1150 50  0001 C CNN
+F 1 "GND" H 7955 1227 50  0000 C CNN
+F 2 "" H 7950 1400 50  0001 C CNN
+F 3 "" H 7950 1400 50  0001 C CNN
+	1    7950 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61987910
+P 8350 1400
+F 0 "#PWR?" H 8350 1150 50  0001 C CNN
+F 1 "GND" H 8355 1227 50  0000 C CNN
+F 2 "" H 8350 1400 50  0001 C CNN
+F 3 "" H 8350 1400 50  0001 C CNN
+	1    8350 1400
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8600 700  8600 1700
+Wire Notes Line
+	8600 1700 7150 1700
+Wire Notes Line
+	7150 1700 7150 700 
+Wire Notes Line
+	7150 700  8600 700 
+Text Notes 7150 650  0    50   ~ 0
+ADC reference voltage filter\n
 $EndSCHEMATC
