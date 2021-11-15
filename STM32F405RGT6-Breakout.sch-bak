@@ -586,4 +586,58 @@ Text Notes 5000 1650 0    50   ~ 0
 Decoupling: 2x100u per VDD + 10u bulk close to chip
 Connection ~ 7750 1700
 Connection ~ 7750 2000
+$Comp
+L Device:C_Small C?
+U 1 1 619C9E84
+P 5300 3400
+F 0 "C?" H 5392 3446 50  0000 L CNN
+F 1 "2.2u" H 5392 3355 50  0000 L CNN
+F 2 "" H 5300 3400 50  0001 C CNN
+F 3 "~" H 5300 3400 50  0001 C CNN
+	1    5300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 619CA465
+P 4950 3400
+F 0 "C?" H 5042 3446 50  0000 L CNN
+F 1 "2.2u" H 5042 3355 50  0000 L CNN
+F 2 "" H 4950 3400 50  0001 C CNN
+F 3 "~" H 4950 3400 50  0001 C CNN
+	1    4950 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3300 4950 3100
+Wire Wire Line
+	4950 3100 5550 3100
+Wire Wire Line
+	5300 3300 5300 3200
+Wire Wire Line
+	5300 3200 5550 3200
+$Comp
+L power:GND #PWR?
+U 1 1 619D0066
+P 4950 3500
+F 0 "#PWR?" H 4950 3250 50  0001 C CNN
+F 1 "GND" H 4955 3327 50  0000 C CNN
+F 2 "" H 4950 3500 50  0001 C CNN
+F 3 "" H 4950 3500 50  0001 C CNN
+	1    4950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 619D0B27
+P 5300 3500
+F 0 "#PWR?" H 5300 3250 50  0001 C CNN
+F 1 "GND" H 5305 3327 50  0000 C CNN
+F 2 "" H 5300 3500 50  0001 C CNN
+F 3 "" H 5300 3500 50  0001 C CNN
+	1    5300 3500
+	1    0    0    -1  
+$EndComp
+Text Notes 4550 3600 0    50   ~ 0
+Internal\nvoltage\nregulator\nfiltering
 $EndSCHEMATC
