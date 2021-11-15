@@ -646,4 +646,8 @@ Text GLabel 5550 2900 0    50   Input ~ 0
 BOOT0
 Text GLabel 6950 4600 2    50   Input ~ 0
 BOOT1
+Text GLabel 5550 3900 0    50   Input ~ 0
+HSE_IN
+Text GLabel 5550 4000 0    50   Input ~ 0
+HSE_OUT
 $EndSCHEMATC

@@ -640,4 +640,10 @@ F 3 "" H 5300 3500 50  0001 C CNN
 $EndComp
 Text Notes 4550 3600 0    50   ~ 0
 Internal\nvoltage\nregulator\nfiltering
+Text GLabel 5550 2700 0    50   Input ~ 0
+NRST
+Text GLabel 5550 2900 0    50   Input ~ 0
+BOOT0
+Text GLabel 6950 4600 2    50   Input ~ 0
+BOOT1
 $EndSCHEMATC
