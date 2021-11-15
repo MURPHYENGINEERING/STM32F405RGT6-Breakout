@@ -226,8 +226,6 @@ Wire Notes Line
 	4650 2350 4650 750 
 Wire Notes Line
 	650  750  4650 750 
-Text Notes 700  700  0    50   ~ 0
-Input voltage regulator
 $Comp
 L power:+3V3 #PWR?
 U 1 1 61974FD8
@@ -377,8 +375,6 @@ Wire Notes Line
 	8400 1800 8400 800 
 Wire Notes Line
 	8400 800  9850 800 
-Text Notes 8400 750  0    50   ~ 0
-ADC reference voltage filter\n
 $Comp
 L Device:C_Small C?
 U 1 1 61993F93
@@ -582,8 +578,6 @@ Wire Wire Line
 	4950 2000 5300 2000
 Wire Wire Line
 	4950 1950 4950 2000
-Text Notes 5000 1650 0    50   ~ 0
-Decoupling: 2x100u per VDD + 10u bulk close to chip
 Connection ~ 7750 1700
 Connection ~ 7750 2000
 $Comp
@@ -625,17 +619,6 @@ F 1 "GND" H 4955 3327 50  0000 C CNN
 F 2 "" H 4950 3500 50  0001 C CNN
 F 3 "" H 4950 3500 50  0001 C CNN
 	1    4950 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 619D0B27
-P 5300 3500
-F 0 "#PWR?" H 5300 3250 50  0001 C CNN
-F 1 "GND" H 5305 3327 50  0000 C CNN
-F 2 "" H 5300 3500 50  0001 C CNN
-F 3 "" H 5300 3500 50  0001 C CNN
-	1    5300 3500
 	1    0    0    -1  
 $EndComp
 Text Notes 4550 3600 0    50   ~ 0
@@ -749,6 +732,112 @@ Wire Notes Line
 	3000 4100 3000 5200
 Wire Notes Line
 	4800 4100 4800 5200
+$Comp
+L Device:R_Small R?
+U 1 1 61A1AA95
+P 7650 3550
+F 0 "R?" H 7709 3596 50  0000 L CNN
+F 1 "10k" H 7709 3505 50  0000 L CNN
+F 2 "" H 7650 3550 50  0001 C CNN
+F 3 "~" H 7650 3550 50  0001 C CNN
+	1    7650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 61A1B70C
+P 7950 3550
+F 0 "R?" H 8009 3596 50  0000 L CNN
+F 1 "10k" H 8009 3505 50  0000 L CNN
+F 2 "" H 7950 3550 50  0001 C CNN
+F 3 "~" H 7950 3550 50  0001 C CNN
+	1    7950 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 3450 1    50   Input ~ 0
+BOOT1
+Text GLabel 7650 3450 1    50   Input ~ 0
+BOOT0
+$Comp
+L power:GND #PWR?
+U 1 1 61A1C688
+P 7650 3650
+F 0 "#PWR?" H 7650 3400 50  0001 C CNN
+F 1 "GND" H 7655 3477 50  0000 C CNN
+F 2 "" H 7650 3650 50  0001 C CNN
+F 3 "" H 7650 3650 50  0001 C CNN
+	1    7650 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A1CBA1
+P 7950 3650
+F 0 "#PWR?" H 7950 3400 50  0001 C CNN
+F 1 "GND" H 7955 3477 50  0000 C CNN
+F 2 "" H 7950 3650 50  0001 C CNN
+F 3 "" H 7950 3650 50  0001 C CNN
+	1    7950 3650
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	7500 3100 7500 3900
+Wire Notes Line
+	7500 3900 8200 3900
+Wire Notes Line
+	8200 3900 8200 3100
+Wire Notes Line
+	8200 3100 7500 3100
+Text Notes 7500 3050 0    50   ~ 0
+Set boot mode
+Text Notes 8400 750  0    50   ~ 0
+ADC reference voltage filter\n
+Text Notes 650  700  0    50   ~ 0
+Input voltage regulator
 Text Notes 3000 4050 0    50   ~ 0
 "High" speed crystal oscillator
+Text GLabel 6950 4000 2    50   Input ~ 0
+SWDIO
+Text GLabel 6950 4100 2    50   Input ~ 0
+SWCLK
+Text GLabel 6950 4700 2    50   Input ~ 0
+SWO
+$Comp
+L power:GND #PWR?
+U 1 1 619D0B27
+P 5300 3500
+F 0 "#PWR?" H 5300 3250 50  0001 C CNN
+F 1 "GND" H 5305 3327 50  0000 C CNN
+F 2 "" H 5300 3500 50  0001 C CNN
+F 3 "" H 5300 3500 50  0001 C CNN
+	1    5300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61A2A7A4
+P 6150 6200
+F 0 "#PWR?" H 6150 5950 50  0001 C CNN
+F 1 "GND" H 6155 6027 50  0000 C CNN
+F 2 "" H 6150 6200 50  0001 C CNN
+F 3 "" H 6150 6200 50  0001 C CNN
+	1    6150 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6100 6150 6150
+Wire Wire Line
+	6350 6100 6350 6150
+Wire Wire Line
+	6350 6150 6250 6150
+Connection ~ 6150 6150
+Wire Wire Line
+	6250 6100 6250 6150
+Connection ~ 6250 6150
+Wire Wire Line
+	6250 6150 6150 6150
+Wire Wire Line
+	6150 6150 6150 6200
+Text Notes 5000 1650 0    50   ~ 0
+Decoupling: 2x100u per VDD + 10u bulk close to chip
 $EndSCHEMATC
