@@ -578,8 +578,6 @@ Wire Wire Line
 	4950 2000 5300 2000
 Wire Wire Line
 	4950 1950 4950 2000
-Text Notes 5000 1650 0    50   ~ 0
-Decoupling: 2x100u per VDD + 10u bulk close to chip
 Connection ~ 7750 1700
 Connection ~ 7750 2000
 $Comp
@@ -840,4 +838,6 @@ Wire Wire Line
 	6250 6150 6150 6150
 Wire Wire Line
 	6150 6150 6150 6200
+Text Notes 5000 1650 0    50   ~ 0
+Decoupling: 2x100u per VDD + 10u bulk close to chip
 $EndSCHEMATC

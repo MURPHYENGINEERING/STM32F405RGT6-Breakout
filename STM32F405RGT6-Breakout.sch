@@ -49,12 +49,12 @@ $EndComp
 $Comp
 L Device:Fuse_Small F?
 U 1 1 61935A18
-P 2450 1350
-F 0 "F?" H 2450 1535 50  0000 C CNN
-F 1 "500mA" H 2450 1444 50  0000 C CNN
-F 2 "" H 2450 1350 50  0001 C CNN
-F 3 "~" H 2450 1350 50  0001 C CNN
-	1    2450 1350
+P 2400 1350
+F 0 "F?" H 2400 1535 50  0000 C CNN
+F 1 "500mA" H 2400 1444 50  0000 C CNN
+F 2 "" H 2400 1350 50  0001 C CNN
+F 3 "~" H 2400 1350 50  0001 C CNN
+	1    2400 1350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -86,8 +86,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 1400 2000 1350
 Wire Wire Line
-	2500 1350 2550 1350
-Wire Wire Line
 	3100 1350 3350 1350
 $Comp
 L power:GND #PWR?
@@ -118,7 +116,7 @@ Throttle current through\nthe zener if polarity is reversed\n
 Wire Wire Line
 	2000 1350 1800 1350
 Wire Wire Line
-	2000 1350 2350 1350
+	2000 1350 2300 1350
 Text Notes 1900 1850 0    50   ~ 0
 Bleed off gate voltage \nif it goes near Vgs
 Text Notes 700  1750 0    50   ~ 0
@@ -184,9 +182,8 @@ $EndComp
 Connection ~ 4200 1350
 Wire Wire Line
 	4200 1350 4100 1350
-Connection ~ 2550 1350
 Wire Wire Line
-	2550 1350 2900 1350
+	2500 1350 2900 1350
 Text Notes 3950 1850 0    50   ~ 0
 Caps for stability\n
 Text Notes 2800 1000 0    50   ~ 0
