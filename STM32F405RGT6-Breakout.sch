@@ -85,17 +85,6 @@ F 3 "" H 1600 2050 50  0001 C CNN
 	1    1600 2050
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR01
-U 1 1 6195256A
-P 950 1350
-F 0 "#PWR01" H 950 1200 50  0001 C CNN
-F 1 "VCC" H 965 1523 50  0000 C CNN
-F 2 "" H 950 1350 50  0001 C CNN
-F 3 "" H 950 1350 50  0001 C CNN
-	1    950  1350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	950  1350 1400 1350
 Text Notes 1750 2200 0    50   ~ 0
@@ -135,17 +124,15 @@ Wire Wire Line
 	3800 1750 4200 1750
 Wire Wire Line
 	3800 1750 3800 1800
-Wire Wire Line
-	4350 1350 4200 1350
 $Comp
 L power:+3V3 #PWR015
 U 1 1 61961ED5
-P 4350 1350
-F 0 "#PWR015" H 4350 1200 50  0001 C CNN
-F 1 "+3V3" H 4365 1523 50  0000 C CNN
-F 2 "" H 4350 1350 50  0001 C CNN
-F 3 "" H 4350 1350 50  0001 C CNN
-	1    4350 1350
+P 4350 1250
+F 0 "#PWR015" H 4350 1100 50  0001 C CNN
+F 1 "+3V3" H 4365 1423 50  0000 C CNN
+F 2 "" H 4350 1250 50  0001 C CNN
+F 3 "" H 4350 1250 50  0001 C CNN
+	1    4350 1250
 	1    0    0    -1  
 $EndComp
 Connection ~ 4200 1350
@@ -153,7 +140,7 @@ Wire Wire Line
 	4200 1350 4100 1350
 Wire Wire Line
 	2500 1350 2900 1350
-Text Notes 3950 1850 0    50   ~ 0
+Text Notes 3050 1850 0    50   ~ 0
 Caps for stability\n
 Text Notes 2800 1000 0    50   ~ 0
 High frequency \nnoise filter\n
@@ -187,94 +174,94 @@ Wire Notes Line
 $Comp
 L power:+3V3 #PWR014
 U 1 1 6197E4D1
-P 4300 5350
-F 0 "#PWR014" H 4300 5200 50  0001 C CNN
-F 1 "+3V3" H 4315 5523 50  0000 C CNN
-F 2 "" H 4300 5350 50  0001 C CNN
-F 3 "" H 4300 5350 50  0001 C CNN
-	1    4300 5350
+P 4350 5400
+F 0 "#PWR014" H 4350 5250 50  0001 C CNN
+F 1 "+3V3" H 4365 5573 50  0000 C CNN
+F 2 "" H 4350 5400 50  0001 C CNN
+F 3 "" H 4350 5400 50  0001 C CNN
+	1    4350 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Ferrite_Bead_Small FB2
 U 1 1 6197F29F
-P 4750 5500
-F 0 "FB2" V 4513 5500 50  0000 C CNN
-F 1 "100 @ 100 MHz" V 4604 5500 50  0000 C CNN
-F 2 "" V 4680 5500 50  0001 C CNN
-F 3 "~" H 4750 5500 50  0001 C CNN
-	1    4750 5500
+P 4700 5500
+F 0 "FB2" V 4463 5500 50  0000 C CNN
+F 1 "     100 @ 100 MHz" V 4554 5500 50  0000 C CNN
+F 2 "" V 4630 5500 50  0001 C CNN
+F 3 "~" H 4700 5500 50  0001 C CNN
+	1    4700 5500
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C14
 U 1 1 6197FBF2
-P 5000 5700
-F 0 "C14" H 5092 5746 50  0000 L CNN
-F 1 "100n" H 5092 5655 50  0000 L CNN
-F 2 "" H 5000 5700 50  0001 C CNN
-F 3 "~" H 5000 5700 50  0001 C CNN
-	1    5000 5700
+P 4950 5700
+F 0 "C14" H 5042 5746 50  0000 L CNN
+F 1 "100n" H 5042 5655 50  0000 L CNN
+F 2 "" H 4950 5700 50  0001 C CNN
+F 3 "~" H 4950 5700 50  0001 C CNN
+	1    4950 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C15
 U 1 1 61980239
-P 5400 5700
-F 0 "C15" H 5492 5746 50  0000 L CNN
-F 1 "10n" H 5492 5655 50  0000 L CNN
-F 2 "" H 5400 5700 50  0001 C CNN
-F 3 "~" H 5400 5700 50  0001 C CNN
-	1    5400 5700
+P 5350 5700
+F 0 "C15" H 5442 5746 50  0000 L CNN
+F 1 "10n" H 5442 5655 50  0000 L CNN
+F 2 "" H 5350 5700 50  0001 C CNN
+F 3 "~" H 5350 5700 50  0001 C CNN
+	1    5350 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5400 5600 5400 5500
+	5350 5600 5350 5500
 Wire Wire Line
-	5400 5500 5000 5500
+	5350 5500 4950 5500
 Wire Wire Line
-	5000 5600 5000 5500
-Connection ~ 5000 5500
+	4950 5600 4950 5500
+Connection ~ 4950 5500
 Wire Wire Line
-	5000 5500 4850 5500
+	4950 5500 4800 5500
 Wire Wire Line
-	4300 5350 4300 5500
+	4350 5400 4350 5500
 Wire Wire Line
-	4300 5500 4650 5500
+	4350 5500 4600 5500
 $Comp
 L power:+3.3VA #PWR022
 U 1 1 61985D6F
-P 5400 5350
-F 0 "#PWR022" H 5400 5200 50  0001 C CNN
-F 1 "+3.3VA" H 5415 5523 50  0000 C CNN
-F 2 "" H 5400 5350 50  0001 C CNN
-F 3 "" H 5400 5350 50  0001 C CNN
-	1    5400 5350
+P 5350 5400
+F 0 "#PWR022" H 5350 5250 50  0001 C CNN
+F 1 "+3.3VA" H 5365 5573 50  0000 C CNN
+F 2 "" H 5350 5400 50  0001 C CNN
+F 3 "" H 5350 5400 50  0001 C CNN
+	1    5350 5400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5400 5350 5400 5500
-Connection ~ 5400 5500
+	5350 5400 5350 5500
+Connection ~ 5350 5500
 $Comp
 L power:GND #PWR019
 U 1 1 6198711A
-P 5000 5800
-F 0 "#PWR019" H 5000 5550 50  0001 C CNN
-F 1 "GND" H 5005 5627 50  0000 C CNN
-F 2 "" H 5000 5800 50  0001 C CNN
-F 3 "" H 5000 5800 50  0001 C CNN
-	1    5000 5800
+P 4950 5800
+F 0 "#PWR019" H 4950 5550 50  0001 C CNN
+F 1 "GND" H 4955 5627 50  0000 C CNN
+F 2 "" H 4950 5800 50  0001 C CNN
+F 3 "" H 4950 5800 50  0001 C CNN
+	1    4950 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR023
 U 1 1 61987910
-P 5400 5800
-F 0 "#PWR023" H 5400 5550 50  0001 C CNN
-F 1 "GND" H 5405 5627 50  0000 C CNN
-F 2 "" H 5400 5800 50  0001 C CNN
-F 3 "" H 5400 5800 50  0001 C CNN
-	1    5400 5800
+P 5350 5800
+F 0 "#PWR023" H 5350 5550 50  0001 C CNN
+F 1 "GND" H 5355 5627 50  0000 C CNN
+F 2 "" H 5350 5800 50  0001 C CNN
+F 3 "" H 5350 5800 50  0001 C CNN
+	1    5350 5800
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -606,7 +593,7 @@ HSE_IN
 Wire Wire Line
 	5000 6800 5000 6950
 Text Notes 4250 7450 0    50   ~ 0
-Cl = 2 * (CLOAD_CRYSTAL - CPARASITIC)\n     = 2 * (9p - 2p)\n     = 14p ~~ 12p
+Cl = 2 * (CLOAD_CRYSTAL - CPARASITIC)\n   = 2 * (9p - 2p)\n   = 14p ~~ 12p
 Wire Notes Line
 	6000 7500 4200 7500
 Wire Notes Line
@@ -774,9 +761,6 @@ F 3 "~" H 4800 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 1350 4550 1350
-Connection ~ 4350 1350
-Wire Wire Line
 	4750 1350 4800 1350
 Wire Wire Line
 	4800 1350 4800 1450
@@ -807,10 +791,6 @@ Text GLabel 1900 6000 0    50   Input ~ 0
 USART6_TX
 Text GLabel 1900 6100 0    50   Input ~ 0
 USART6_RX
-Text GLabel 3300 4800 2    50   Input ~ 0
-USB_FS_DM
-Text GLabel 3300 4900 2    50   Input ~ 0
-USB_FS_DP
 Wire Wire Line
 	2500 7150 2500 7200
 Wire Wire Line
@@ -1023,111 +1003,37 @@ Wire Notes Line
 Wire Notes Line
 	5200 750  9350 750 
 Wire Notes Line
-	4850 2750 4850 3650
+	4950 2750 4950 3650
 Text Notes 4200 2700 0    50   ~ 0
 I2C data pullups
 Wire Notes Line
 	4200 3650 4200 2750
 Wire Notes Line
-	5500 3650 4200 3650
+	5650 3650 4200 3650
 Wire Notes Line
-	5500 2750 5500 3650
-Wire Notes Line
-	4200 2750 5500 2750
-$Comp
-L power:+3V3 #PWR021
-U 1 1 61C2221C
-P 5250 3000
-F 0 "#PWR021" H 5250 2850 50  0001 C CNN
-F 1 "+3V3" H 5265 3173 50  0000 C CNN
-F 2 "" H 5250 3000 50  0001 C CNN
-F 3 "" H 5250 3000 50  0001 C CNN
-	1    5250 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR018
-U 1 1 61C21E76
-P 4950 3000
-F 0 "#PWR018" H 4950 2850 50  0001 C CNN
-F 1 "+3V3" H 4965 3173 50  0000 C CNN
-F 2 "" H 4950 3000 50  0001 C CNN
-F 3 "" H 4950 3000 50  0001 C CNN
-	1    4950 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR016
-U 1 1 61C21B1C
-P 4600 3000
-F 0 "#PWR016" H 4600 2850 50  0001 C CNN
-F 1 "+3V3" H 4615 3173 50  0000 C CNN
-F 2 "" H 4600 3000 50  0001 C CNN
-F 3 "" H 4600 3000 50  0001 C CNN
-	1    4600 3000
-	1    0    0    -1  
-$EndComp
+	4200 2750 5650 2750
 $Comp
 L power:+3V3 #PWR012
 U 1 1 61C20BF7
-P 4300 3000
-F 0 "#PWR012" H 4300 2850 50  0001 C CNN
-F 1 "+3V3" H 4315 3173 50  0000 C CNN
-F 2 "" H 4300 3000 50  0001 C CNN
-F 3 "" H 4300 3000 50  0001 C CNN
-	1    4300 3000
+P 4350 3000
+F 0 "#PWR012" H 4350 2850 50  0001 C CNN
+F 1 "+3V3" H 4365 3173 50  0000 C CNN
+F 2 "" H 4350 3000 50  0001 C CNN
+F 3 "" H 4350 3000 50  0001 C CNN
+	1    4350 3000
 	1    0    0    -1  
 $EndComp
-Text GLabel 5250 3200 3    50   Input ~ 0
-I2C2_SDA
-Text GLabel 4950 3200 3    50   Input ~ 0
-I2C2_SCL
-$Comp
-L Device:R_Small R5
-U 1 1 61C15D43
-P 4950 3100
-F 0 "R5" H 5009 3146 50  0000 L CNN
-F 1 "2.2k" H 5009 3055 50  0000 L CNN
-F 2 "" H 4950 3100 50  0001 C CNN
-F 3 "~" H 4950 3100 50  0001 C CNN
-	1    4950 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 61C15D39
-P 5250 3100
-F 0 "R6" H 5309 3146 50  0000 L CNN
-F 1 "2.2k" H 5309 3055 50  0000 L CNN
-F 2 "" H 5250 3100 50  0001 C CNN
-F 3 "~" H 5250 3100 50  0001 C CNN
-	1    5250 3100
-	1    0    0    -1  
-$EndComp
-Text GLabel 4600 3200 3    50   Input ~ 0
-I2C1_SDA
-Text GLabel 4300 3200 3    50   Input ~ 0
+Text GLabel 4350 3200 3    50   Input ~ 0
 I2C1_SCL
 $Comp
 L Device:R_Small R3
 U 1 1 61C15129
-P 4300 3100
-F 0 "R3" H 4359 3146 50  0000 L CNN
-F 1 "2.2k" H 4359 3055 50  0000 L CNN
-F 2 "" H 4300 3100 50  0001 C CNN
-F 3 "~" H 4300 3100 50  0001 C CNN
-	1    4300 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 61C14C17
-P 4600 3100
-F 0 "R4" H 4659 3146 50  0000 L CNN
-F 1 "2.2k" H 4659 3055 50  0000 L CNN
-F 2 "" H 4600 3100 50  0001 C CNN
-F 3 "~" H 4600 3100 50  0001 C CNN
-	1    4600 3100
+P 4350 3100
+F 0 "R3" H 4409 3146 50  0000 L CNN
+F 1 "2.2k" H 4409 3055 50  0000 L CNN
+F 2 "" H 4350 3100 50  0001 C CNN
+F 3 "~" H 4350 3100 50  0001 C CNN
+	1    4350 3100
 	1    0    0    -1  
 $EndComp
 Text GLabel 6850 1200 2    50   Input ~ 0
@@ -1241,17 +1147,6 @@ $EndComp
 Wire Wire Line
 	3100 1350 3350 1350
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J8
-U 1 1 61DA89D1
-P 7200 3900
-F 0 "J8" H 7307 4767 50  0000 C CNN
-F 1 "USB_C_Receptacle_USB2.0" H 7307 4676 50  0000 C CNN
-F 2 "" H 7350 3900 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 7350 3900 50  0001 C CNN
-	1    7200 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x04 J5
 U 1 1 61DAC74A
 P 5550 1200
@@ -1337,10 +1232,10 @@ F 3 "" H 8000 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR031
 U 1 1 61E54E72
 P 6850 1000
-F 0 "#PWR?" H 6850 850 50  0001 C CNN
+F 0 "#PWR031" H 6850 850 50  0001 C CNN
 F 1 "+3V3" H 7000 1100 50  0000 C CNN
 F 2 "" H 6850 1000 50  0001 C CNN
 F 3 "" H 6850 1000 50  0001 C CNN
@@ -1348,10 +1243,10 @@ F 3 "" H 6850 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR033
 U 1 1 61E55F38
 P 6850 1750
-F 0 "#PWR?" H 6850 1600 50  0001 C CNN
+F 0 "#PWR033" H 6850 1600 50  0001 C CNN
 F 1 "+3V3" H 7000 1850 50  0000 C CNN
 F 2 "" H 6850 1750 50  0001 C CNN
 F 3 "" H 6850 1750 50  0001 C CNN
@@ -1359,10 +1254,10 @@ F 3 "" H 6850 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR026
 U 1 1 61DEB890
 P 5750 1000
-F 0 "#PWR?" H 5750 850 50  0001 C CNN
+F 0 "#PWR026" H 5750 850 50  0001 C CNN
 F 1 "+3V3" H 5900 1100 50  0000 C CNN
 F 2 "" H 5750 1000 50  0001 C CNN
 F 3 "" H 5750 1000 50  0001 C CNN
@@ -1370,10 +1265,10 @@ F 3 "" H 5750 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR034
 U 1 1 61E565AA
 P 6850 2050
-F 0 "#PWR?" H 6850 1800 50  0001 C CNN
+F 0 "#PWR034" H 6850 1800 50  0001 C CNN
 F 1 "GND" H 7000 2000 50  0000 C CNN
 F 2 "" H 6850 2050 50  0001 C CNN
 F 3 "" H 6850 2050 50  0001 C CNN
@@ -1381,10 +1276,10 @@ F 3 "" H 6850 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR032
 U 1 1 61E55AA2
 P 6850 1300
-F 0 "#PWR?" H 6850 1050 50  0001 C CNN
+F 0 "#PWR032" H 6850 1050 50  0001 C CNN
 F 1 "GND" H 7000 1250 50  0000 C CNN
 F 2 "" H 6850 1300 50  0001 C CNN
 F 3 "" H 6850 1300 50  0001 C CNN
@@ -1392,10 +1287,10 @@ F 3 "" H 6850 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR027
 U 1 1 61E4FC1F
 P 5750 1300
-F 0 "#PWR?" H 5750 1050 50  0001 C CNN
+F 0 "#PWR027" H 5750 1050 50  0001 C CNN
 F 1 "GND" H 5900 1250 50  0000 C CNN
 F 2 "" H 5750 1300 50  0001 C CNN
 F 3 "" H 5750 1300 50  0001 C CNN
@@ -1416,14 +1311,266 @@ F 3 "" H 8000 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Power_Protection:USBLC6-2SC6 U?
+L Power_Protection:USBLC6-2SC6 U3
 U 1 1 61F1D48F
-P 9350 3650
-F 0 "U?" H 9650 4000 50  0000 C CNN
-F 1 "IP4220CZ6 " H 9650 3300 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9350 3150 50  0001 C CNN
-F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 9550 4000 50  0001 C CNN
-	1    9350 3650
+P 9650 3850
+F 0 "U3" H 9900 4200 50  0000 C CNN
+F 1 "IP4220CZ6 " H 9950 3500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9650 3350 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 9850 4200 50  0001 C CNN
+	1    9650 3850
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 61F4F806
+P 950 1250
+F 0 "#PWR01" H 950 1100 50  0001 C CNN
+F 1 "+5V" H 965 1423 50  0000 C CNN
+F 2 "" H 950 1250 50  0001 C CNN
+F 3 "" H 950 1250 50  0001 C CNN
+	1    950  1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1250 950  1350
+Wire Wire Line
+	4200 1350 4350 1350
+Wire Wire Line
+	4350 1250 4350 1350
+Connection ~ 4350 1350
+Wire Wire Line
+	4350 1350 4550 1350
+Text Notes 4400 1950 0    50   ~ 0
+Power indicator\n\n
+Text Notes 850  1050 0    50   ~ 0
+USB in\n\n
+Text Notes 4100 1000 0    50   ~ 10
+Main power rail
+$Comp
+L power:GND #PWR035
+U 1 1 61F61B97
+P 7050 4750
+F 0 "#PWR035" H 7050 4500 50  0001 C CNN
+F 1 "GND" H 7050 4600 50  0000 C CNN
+F 2 "" H 7050 4750 50  0001 C CNN
+F 3 "" H 7050 4750 50  0001 C CNN
+	1    7050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4650 7050 4750
+NoConn ~ 6750 4650
+Text GLabel 3300 4900 2    50   Input ~ 0
+USB_D+
+Text GLabel 3300 4800 2    50   Input ~ 0
+USB_D-
+Connection ~ 7650 3950
+Connection ~ 7650 3750
+Text GLabel 7700 3950 2    50   Input ~ 0
+USB_CONN_D+
+Text GLabel 7700 3750 2    50   Input ~ 0
+USB_CONN_D-
+Text GLabel 9250 3950 0    50   Input ~ 0
+USB_CONN_D-
+$Comp
+L power:+5V #PWR038
+U 1 1 61FA3FDE
+P 9650 3450
+F 0 "#PWR038" H 9650 3300 50  0001 C CNN
+F 1 "+5V" H 9665 3623 50  0000 C CNN
+F 2 "" H 9650 3450 50  0001 C CNN
+F 3 "" H 9650 3450 50  0001 C CNN
+	1    9650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR039
+U 1 1 61FA474D
+P 9650 4250
+F 0 "#PWR039" H 9650 4000 50  0001 C CNN
+F 1 "GND" H 9650 4100 50  0000 C CNN
+F 2 "" H 9650 4250 50  0001 C CNN
+F 3 "" H 9650 4250 50  0001 C CNN
+	1    9650 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 3750 0    50   Input ~ 0
+USB_D-
+Text GLabel 10050 3750 2    50   Input ~ 0
+USB_D+
+Text GLabel 10050 3950 2    50   Input ~ 0
+USB_CONN_D+
+Text Notes 7300 5050 0    50   ~ 0
+"Supporting Type-C from an existing USB2.0 design is straightforward and cheap \n(except for the connector). Basically you tie the DP pins together, tie the DM pins \ntogether, and add one pull-down resistor to each CC pin. This new Type-C device \nwill identify as a data and power sink, use the default USB2.0 power of 500 mA, \nand work in either orientation of the plug."
+Wire Wire Line
+	7650 3350 7700 3350
+Wire Wire Line
+	7650 3450 7700 3450
+Wire Wire Line
+	7900 3350 8300 3350
+Wire Wire Line
+	8300 3350 8300 3450
+Wire Wire Line
+	8300 3450 7900 3450
+$Comp
+L power:GND #PWR037
+U 1 1 61FCA231
+P 8300 3450
+F 0 "#PWR037" H 8300 3200 50  0001 C CNN
+F 1 "GND" H 8300 3300 50  0000 C CNN
+F 2 "" H 8300 3450 50  0001 C CNN
+F 3 "" H 8300 3450 50  0001 C CNN
+	1    8300 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8300 3450
+Wire Wire Line
+	7700 3750 7650 3750
+Wire Wire Line
+	7650 3650 7650 3750
+Wire Wire Line
+	7700 3950 7650 3950
+Wire Wire Line
+	7650 3850 7650 3950
+NoConn ~ 7650 4250
+NoConn ~ 7650 4350
+Text Notes 6200 4850 0    50   ~ 0
+The shield is\ngrounded at \nthe host.
+$Comp
+L power:+5V #PWR036
+U 1 1 61F5C05B
+P 8300 3100
+F 0 "#PWR036" H 8300 2950 50  0001 C CNN
+F 1 "+5V" H 8315 3273 50  0000 C CNN
+F 2 "" H 8300 3100 50  0001 C CNN
+F 3 "" H 8300 3100 50  0001 C CNN
+	1    8300 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3150 8300 3150
+Wire Wire Line
+	8300 3150 8300 3100
+$Comp
+L Device:R_Small R11
+U 1 1 61FB8501
+P 7800 3350
+F 0 "R11" V 7750 3500 50  0000 C CNN
+F 1 "5.1k" V 7700 3350 50  0000 C CNN
+F 2 "" H 7800 3350 50  0001 C CNN
+F 3 "~" H 7800 3350 50  0001 C CNN
+	1    7800 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J8
+U 1 1 61DA89D1
+P 7050 3750
+F 0 "J8" H 7400 4500 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 7650 3000 50  0000 C CNN
+F 2 "" H 7200 3750 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 7200 3750 50  0001 C CNN
+	1    7050 3750
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6100 5200 6100 2750
+Wire Notes Line
+	6100 2750 10750 2750
+Wire Notes Line
+	10750 2750 10750 5200
+Wire Notes Line
+	10750 5200 6100 5200
+Text Notes 6100 2700 0    50   ~ 0
+USB-C (USB2.0)
+$Comp
+L Device:R_Small R6
+U 1 1 61C15D39
+P 5400 3100
+F 0 "R6" H 5459 3146 50  0000 L CNN
+F 1 "2.2k" H 5459 3055 50  0000 L CNN
+F 2 "" H 5400 3100 50  0001 C CNN
+F 3 "~" H 5400 3100 50  0001 C CNN
+	1    5400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 61C15D43
+P 5100 3100
+F 0 "R5" H 5159 3146 50  0000 L CNN
+F 1 "2.2k" H 5159 3055 50  0000 L CNN
+F 2 "" H 5100 3100 50  0001 C CNN
+F 3 "~" H 5100 3100 50  0001 C CNN
+	1    5100 3100
+	1    0    0    -1  
+$EndComp
+Text GLabel 5100 3200 3    50   Input ~ 0
+I2C2_SCL
+Text GLabel 5400 3200 3    50   Input ~ 0
+I2C2_SDA
+$Comp
+L power:+3V3 #PWR018
+U 1 1 61C21E76
+P 5100 3000
+F 0 "#PWR018" H 5100 2850 50  0001 C CNN
+F 1 "+3V3" H 5115 3173 50  0000 C CNN
+F 2 "" H 5100 3000 50  0001 C CNN
+F 3 "" H 5100 3000 50  0001 C CNN
+	1    5100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR021
+U 1 1 61C2221C
+P 5400 3000
+F 0 "#PWR021" H 5400 2850 50  0001 C CNN
+F 1 "+3V3" H 5415 3173 50  0000 C CNN
+F 2 "" H 5400 3000 50  0001 C CNN
+F 3 "" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	5650 2750 5650 3650
+$Comp
+L power:+3V3 #PWR016
+U 1 1 61C21B1C
+P 4650 3000
+F 0 "#PWR016" H 4650 2850 50  0001 C CNN
+F 1 "+3V3" H 4665 3173 50  0000 C CNN
+F 2 "" H 4650 3000 50  0001 C CNN
+F 3 "" H 4650 3000 50  0001 C CNN
+	1    4650 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 3200 3    50   Input ~ 0
+I2C1_SDA
+$Comp
+L Device:R_Small R4
+U 1 1 61C14C17
+P 4650 3100
+F 0 "R4" H 4709 3146 50  0000 L CNN
+F 1 "2.2k" H 4709 3055 50  0000 L CNN
+F 2 "" H 4650 3100 50  0001 C CNN
+F 3 "~" H 4650 3100 50  0001 C CNN
+	1    4650 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 61FB9709
+P 7800 3450
+F 0 "R12" V 7850 3600 50  0000 C CNN
+F 1 "5.1k" V 7900 3450 50  0000 C CNN
+F 2 "" H 7800 3450 50  0001 C CNN
+F 3 "~" H 7800 3450 50  0001 C CNN
+	1    7800 3450
+	0    1    1    0   
+$EndComp
+Text Notes 7750 4400 0    50   ~ 0
+USB2.0 cables don't\nconnect to SBU, so \nwe can leave it floating.
+Text Notes 9100 3150 0    50   ~ 0
+Push spikes >5V up the ladder \nand shunt down to ground.\n(at least I think that's how it works)
 $EndSCHEMATC
