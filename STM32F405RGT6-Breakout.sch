@@ -449,7 +449,7 @@ U 1 1 619D5B8C
 P 5000 6700
 F 0 "HSE1" H 4650 6900 50  0000 L CNN
 F 1 "16MHz" H 4650 6800 50  0000 L CNN
-F 2 "" H 5000 6700 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 5000 6700 50  0001 C CNN
 F 3 "~" H 5000 6700 50  0001 C CNN
 	1    5000 6700
 	1    0    0    -1  
@@ -986,7 +986,7 @@ U 1 1 61D58BCA
 P 9950 1550
 F 0 "H3" V 9904 1700 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1700 50  0000 L CNN
-F 2 "" H 9950 1550 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3mm_Pad_Via" H 9950 1550 50  0001 C CNN
 F 3 "~" H 9950 1550 50  0001 C CNN
 	1    9950 1550
 	0    1    1    0   
@@ -997,7 +997,7 @@ U 1 1 61D59E0B
 P 9950 1750
 F 0 "H4" V 9904 1900 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1900 50  0000 L CNN
-F 2 "" H 9950 1750 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3mm_Pad_Via" H 9950 1750 50  0001 C CNN
 F 3 "~" H 9950 1750 50  0001 C CNN
 	1    9950 1750
 	0    1    1    0   
@@ -1008,7 +1008,7 @@ U 1 1 61D5B66E
 P 9950 1350
 F 0 "H2" V 9904 1500 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1500 50  0000 L CNN
-F 2 "" H 9950 1350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3mm_Pad_Via" H 9950 1350 50  0001 C CNN
 F 3 "~" H 9950 1350 50  0001 C CNN
 	1    9950 1350
 	0    1    1    0   
@@ -1019,7 +1019,7 @@ U 1 1 61D5B849
 P 9950 1150
 F 0 "H1" V 9904 1300 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1300 50  0000 L CNN
-F 2 "" H 9950 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3mm_Pad_Via" H 9950 1150 50  0001 C CNN
 F 3 "~" H 9950 1150 50  0001 C CNN
 	1    9950 1150
 	0    1    1    0   
@@ -1249,7 +1249,7 @@ L Power_Protection:USBLC6-2SC6 U3
 U 1 1 61F1D48F
 P 9650 3850
 F 0 "U3" H 9900 4200 50  0000 C CNN
-F 1 "IP4220CZ6 " H 9950 3500 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 9950 3500 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9650 3350 50  0001 C CNN
 F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 9850 4200 50  0001 C CNN
 	1    9650 3850
@@ -1388,7 +1388,7 @@ U 1 1 61DA89D1
 P 7050 3750
 F 0 "J1" H 7400 4500 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 7650 3000 50  0000 C CNN
-F 2 "" H 7200 3750 50  0001 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11" H 7200 3750 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 7200 3750 50  0001 C CNN
 	1    7050 3750
 	1    0    0    -1  
@@ -1541,8 +1541,6 @@ Wire Wire Line
 	950  1350 1400 1350
 Wire Wire Line
 	2000 1350 2300 1350
-Wire Wire Line
-	2500 1350 2700 1350
 $Comp
 L Device:Fuse_Small F1
 U 1 1 61935A18
@@ -1565,9 +1563,6 @@ F 3 "~" H 1600 1450 50  0001 C CNN
 	1    1600 1450
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2700 1350
-Wire Wire Line
-	2700 1350 2900 1350
 Wire Wire Line
 	3350 1750 3800 1750
 Wire Wire Line
@@ -1576,4 +1571,6 @@ Wire Wire Line
 	7050 4650 7050 4950
 Wire Wire Line
 	5350 5400 5350 5500
+Wire Wire Line
+	2500 1350 2900 1350
 $EndSCHEMATC
