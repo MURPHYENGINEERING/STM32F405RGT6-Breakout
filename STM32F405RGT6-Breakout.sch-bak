@@ -25,39 +25,6 @@ F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3900 1100 50  0001 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB1
-U 1 1 619351E4
-P 3000 1350
-F 0 "FB1" V 2763 1350 50  0000 C CNN
-F 1 "100 @ 100 MHz" V 2854 1350 50  0000 C CNN
-F 2 "" V 2930 1350 50  0001 C CNN
-F 3 "~" H 3000 1350 50  0001 C CNN
-	1    3000 1350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Fuse_Small F1
-U 1 1 61935A18
-P 2400 1350
-F 0 "F1" H 2400 1535 50  0000 C CNN
-F 1 "500mA" H 2400 1444 50  0000 C CNN
-F 2 "" H 2400 1350 50  0001 C CNN
-F 3 "~" H 2400 1350 50  0001 C CNN
-	1    2400 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener_Small D2
-U 1 1 61943D90
-P 2000 1500
-F 0 "D2" V 1954 1570 50  0000 L CNN
-F 1 "ZMM5V6" V 2045 1570 50  0000 L CNN
-F 2 "" V 2000 1500 50  0001 C CNN
-F 3 "~" V 2000 1500 50  0001 C CNN
-	1    2000 1500
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 61945077
 P 1600 1900
@@ -68,8 +35,6 @@ F 3 "~" H 1600 1900 50  0001 C CNN
 	1    1600 1900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1650 1600 1750
 Wire Wire Line
 	2000 1650 2000 1600
 Wire Wire Line
@@ -85,16 +50,10 @@ F 3 "" H 1600 2050 50  0001 C CNN
 	1    1600 2050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	950  1350 1400 1350
 Text Notes 1750 2200 0    50   ~ 0
 Throttle current through\nthe zener if polarity is reversed\n
-Wire Wire Line
-	2000 1350 1800 1350
-Wire Wire Line
-	2000 1350 2300 1350
 Text Notes 1900 1850 0    50   ~ 0
-Bleed off gate voltage \nif it goes near Vgs
+Bleed off gate voltage \nif it rises to Vgs
 $Comp
 L power:GND #PWR011
 U 1 1 6194DC8B
@@ -138,26 +97,11 @@ $EndComp
 Connection ~ 4200 1350
 Wire Wire Line
 	4200 1350 4100 1350
-Wire Wire Line
-	2500 1350 2900 1350
 Text Notes 3050 1850 0    50   ~ 0
 Caps for stability\n
 Text Notes 2800 1000 0    50   ~ 0
 High frequency \nnoise filter\n
 Connection ~ 2000 1350
-$Comp
-L Device:Q_PMOS_SGD Q1
-U 1 1 61942650
-P 1600 1450
-F 0 "Q1" V 1942 1450 50  0000 C CNN
-F 1 "Si2301CDS" V 1851 1450 50  0000 C CNN
-F 2 "" H 1800 1550 50  0001 C CNN
-F 3 "~" H 1600 1450 50  0001 C CNN
-	1    1600 1450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2000 1650 1600 1650
 Connection ~ 1600 1650
 Text Notes 2050 1100 0    50   ~ 0
 Fuse\n(does this go \nbefore or \nafter pch?)
@@ -239,8 +183,6 @@ F 3 "" H 5350 5400 50  0001 C CNN
 	1    5350 5400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5350 5400 5350 5500
 Connection ~ 5350 5500
 $Comp
 L power:GND #PWR019
@@ -488,8 +430,6 @@ F 3 "~" H 1300 4400 50  0001 C CNN
 	1    1300 4400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1300 4300 1300 4100
 $Comp
 L power:GND #PWR03
 U 1 1 619D0066
@@ -706,10 +646,10 @@ Wire Wire Line
 Wire Wire Line
 	1150 5900 1000 5900
 $Comp
-L Device:LED_Small D1
+L Device:LED_Small D3
 U 1 1 61A9A358
 P 1250 5900
-F 0 "D1" H 1250 6135 50  0000 C CNN
+F 0 "D3" H 1250 6135 50  0000 C CNN
 F 1 "Red" H 1250 6044 50  0000 C CNN
 F 2 "" V 1250 5900 50  0001 C CNN
 F 3 "~" V 1250 5900 50  0001 C CNN
@@ -739,10 +679,10 @@ F 3 "~" H 1000 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED_Small D3
+L Device:LED_Small D2
 U 1 1 61ABD2B2
 P 4650 1350
-F 0 "D3" H 4650 1143 50  0000 C CNN
+F 0 "D2" H 4650 1143 50  0000 C CNN
 F 1 "Red" H 4650 1234 50  0000 C CNN
 F 2 "" V 4650 1350 50  0001 C CNN
 F 3 "~" V 4650 1350 50  0001 C CNN
@@ -959,10 +899,10 @@ I2C1_SCL
 Text GLabel 5750 1100 2    50   Input ~ 0
 I2C1_SDA
 $Comp
-L Connector_Generic:Conn_01x04 J4
+L Connector_Generic:Conn_01x04 J5
 U 1 1 61C2CF63
 P 5550 2000
-F 0 "J4" H 5650 1900 50  0000 L CNN
+F 0 "J5" H 5650 1900 50  0000 L CNN
 F 1 "SPI1" H 5650 2000 50  0000 L CNN
 F 2 "" H 5550 2000 50  0001 C CNN
 F 3 "~" H 5550 2000 50  0001 C CNN
@@ -1128,10 +1068,6 @@ Wire Wire Line
 	3350 1350 3350 1450
 Wire Wire Line
 	3350 1650 3350 1750
-Wire Wire Line
-	3350 1750 3800 1750
-Wire Wire Line
-	3350 1350 3500 1350
 Connection ~ 3350 1350
 $Comp
 L Device:C_Small C16
@@ -1144,13 +1080,11 @@ F 3 "~" H 3350 1550 50  0001 C CNN
 	1    3350 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3100 1350 3350 1350
 $Comp
-L Connector_Generic:Conn_01x04 J5
+L Connector_Generic:Conn_01x04 J6
 U 1 1 61DAC74A
 P 5550 1200
-F 0 "J5" H 5650 1100 50  0000 L CNN
+F 0 "J6" H 5650 1100 50  0000 L CNN
 F 1 "I2C1" H 5650 1200 50  0000 L CNN
 F 2 "" H 5550 1200 50  0001 C CNN
 F 3 "~" H 5550 1200 50  0001 C CNN
@@ -1158,10 +1092,10 @@ F 3 "~" H 5550 1200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J6
+L Connector_Generic:Conn_01x04 J7
 U 1 1 61DC0149
 P 6650 1200
-F 0 "J6" H 6750 1100 50  0000 L CNN
+F 0 "J7" H 6750 1100 50  0000 L CNN
 F 1 "I2C2" H 6750 1200 50  0000 L CNN
 F 2 "" H 6650 1200 50  0001 C CNN
 F 3 "~" H 6650 1200 50  0001 C CNN
@@ -1169,10 +1103,10 @@ F 3 "~" H 6650 1200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J7
+L Connector_Generic:Conn_01x04 J4
 U 1 1 61DD83D6
 P 6650 1950
-F 0 "J7" H 6750 1850 50  0000 L CNN
+F 0 "J4" H 6750 1850 50  0000 L CNN
 F 1 "USART6" H 6750 1950 50  0000 L CNN
 F 2 "" H 6650 1950 50  0001 C CNN
 F 3 "~" H 6650 1950 50  0001 C CNN
@@ -1321,17 +1255,6 @@ F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 9850 4200 50  0001
 	1    9650 3850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR01
-U 1 1 61F4F806
-P 950 1250
-F 0 "#PWR01" H 950 1100 50  0001 C CNN
-F 1 "+5V" H 965 1423 50  0000 C CNN
-F 2 "" H 950 1250 50  0001 C CNN
-F 3 "" H 950 1250 50  0001 C CNN
-	1    950  1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	950  1250 950  1350
 Wire Wire Line
@@ -1350,16 +1273,14 @@ Main power rail
 $Comp
 L power:GND #PWR035
 U 1 1 61F61B97
-P 7050 4750
-F 0 "#PWR035" H 7050 4500 50  0001 C CNN
-F 1 "GND" H 7050 4600 50  0000 C CNN
-F 2 "" H 7050 4750 50  0001 C CNN
-F 3 "" H 7050 4750 50  0001 C CNN
-	1    7050 4750
+P 7050 4950
+F 0 "#PWR035" H 7050 4700 50  0001 C CNN
+F 1 "GND" H 7050 4800 50  0000 C CNN
+F 2 "" H 7050 4950 50  0001 C CNN
+F 3 "" H 7050 4950 50  0001 C CNN
+	1    7050 4950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7050 4650 7050 4750
 NoConn ~ 6750 4650
 Text GLabel 3300 4900 2    50   Input ~ 0
 USB_D+
@@ -1435,7 +1356,7 @@ Wire Wire Line
 	7650 3850 7650 3950
 NoConn ~ 7650 4250
 NoConn ~ 7650 4350
-Text Notes 6200 4850 0    50   ~ 0
+Text Notes 6150 4700 0    50   ~ 0
 The shield is\ngrounded at \nthe host.
 $Comp
 L power:+5V #PWR036
@@ -1448,8 +1369,6 @@ F 3 "" H 8300 3100 50  0001 C CNN
 	1    8300 3100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7650 3150 8300 3150
 Wire Wire Line
 	8300 3150 8300 3100
 $Comp
@@ -1464,10 +1383,10 @@ F 3 "~" H 7800 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J8
+L Connector:USB_C_Receptacle_USB2.0 J1
 U 1 1 61DA89D1
 P 7050 3750
-F 0 "J8" H 7400 4500 50  0000 C CNN
+F 0 "J1" H 7400 4500 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 7650 3000 50  0000 C CNN
 F 2 "" H 7200 3750 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 7200 3750 50  0001 C CNN
@@ -1484,8 +1403,6 @@ Wire Notes Line
 	10750 5200 6100 5200
 Text Notes 6100 2700 0    50   ~ 0
 USB-C (USB2.0)
-Text Notes 9100 3150 0    50   ~ 0
-Push spikes >5V up the ladder \nand shunt down to ground.\n(at least I think that's how it works)
 $Comp
 L Device:R_Small R6
 U 1 1 61C15D39
@@ -1573,4 +1490,90 @@ F 3 "~" H 7800 3450 50  0001 C CNN
 $EndComp
 Text Notes 7750 4400 0    50   ~ 0
 USB2.0 cables don't\nconnect to SBU, so \nwe can leave it floating.
+Text Notes 9100 3150 0    50   ~ 0
+Push spikes >5V up the ladder \nand shunt down to ground.\n(at least I think that's how it works)
+Wire Wire Line
+	1300 4100 1300 4300
+$Comp
+L power:+5V #PWR0101
+U 1 1 62154291
+P 950 1250
+F 0 "#PWR0101" H 950 1100 50  0001 C CNN
+F 1 "+5V" H 965 1423 50  0000 C CNN
+F 2 "" H 950 1250 50  0001 C CNN
+F 3 "" H 950 1250 50  0001 C CNN
+	1    950  1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1350 3500 1350
+Wire Wire Line
+	1600 1650 1600 1750
+Wire Wire Line
+	2000 1650 1600 1650
+Wire Wire Line
+	2000 1350 1800 1350
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 61943D90
+P 2000 1500
+F 0 "D1" V 1954 1570 50  0000 L CNN
+F 1 "ZMM5V6" V 2045 1570 50  0000 L CNN
+F 2 "" V 2000 1500 50  0001 C CNN
+F 3 "~" V 2000 1500 50  0001 C CNN
+	1    2000 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 1350 3350 1350
+$Comp
+L Device:Ferrite_Bead_Small FB1
+U 1 1 619351E4
+P 3000 1350
+F 0 "FB1" V 2763 1350 50  0000 C CNN
+F 1 "100 @ 100 MHz" V 2854 1350 50  0000 C CNN
+F 2 "" V 2930 1350 50  0001 C CNN
+F 3 "~" H 3000 1350 50  0001 C CNN
+	1    3000 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	950  1350 1400 1350
+Wire Wire Line
+	2000 1350 2300 1350
+Wire Wire Line
+	2500 1350 2700 1350
+$Comp
+L Device:Fuse_Small F1
+U 1 1 61935A18
+P 2400 1350
+F 0 "F1" H 2400 1535 50  0000 C CNN
+F 1 "500mA" H 2400 1444 50  0000 C CNN
+F 2 "" H 2400 1350 50  0001 C CNN
+F 3 "~" H 2400 1350 50  0001 C CNN
+	1    2400 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_SGD Q1
+U 1 1 61942650
+P 1600 1450
+F 0 "Q1" V 1942 1450 50  0000 C CNN
+F 1 "Si2301CDS" V 1851 1450 50  0000 C CNN
+F 2 "" H 1800 1550 50  0001 C CNN
+F 3 "~" H 1600 1450 50  0001 C CNN
+	1    1600 1450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2700 1350
+Wire Wire Line
+	2700 1350 2900 1350
+Wire Wire Line
+	3350 1750 3800 1750
+Wire Wire Line
+	7650 3150 8300 3150
+Wire Wire Line
+	7050 4650 7050 4950
+Wire Wire Line
+	5350 5400 5350 5500
 $EndSCHEMATC
