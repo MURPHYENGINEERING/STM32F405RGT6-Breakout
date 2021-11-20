@@ -1573,4 +1573,49 @@ Wire Wire Line
 	5350 5400 5350 5500
 Wire Wire Line
 	2500 1350 2900 1350
+$Comp
+L Memory_Flash:W25Q128JVS U?
+U 1 1 61978862
+P 7500 6050
+F 0 "U?" H 7850 6400 50  0000 C CNN
+F 1 "W25Q128JVS" H 7800 5700 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 7500 6050 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf" H 7500 6050 50  0001 C CNN
+	1    7500 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6197D247
+P 7500 6450
+F 0 "#PWR?" H 7500 6200 50  0001 C CNN
+F 1 "GND" H 7500 6300 50  0000 C CNN
+F 2 "" H 7500 6450 50  0001 C CNN
+F 3 "" H 7500 6450 50  0001 C CNN
+	1    7500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6197DBCF
+P 7500 5650
+F 0 "#PWR?" H 7500 5500 50  0001 C CNN
+F 1 "+3V3" H 7515 5823 50  0000 C CNN
+F 2 "" H 7500 5650 50  0001 C CNN
+F 3 "" H 7500 5650 50  0001 C CNN
+	1    7500 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7000 5950 0    50   Input ~ 0
+FLASH_CS
+Text GLabel 7000 6150 0    50   Input ~ 0
+FLASH_SCLK
+Text GLabel 8000 5850 2    50   Input ~ 0
+FLASH_MOSI
+Text GLabel 8000 5950 2    50   Input ~ 0
+FLASH_MISO
+NoConn ~ 8000 6150
+NoConn ~ 8000 6250
+Text Notes 8100 6250 0    50   ~ 0
+IO2/3 for Quad SPI,\nnot used
 $EndSCHEMATC
