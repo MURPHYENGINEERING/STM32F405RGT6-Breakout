@@ -1031,17 +1031,6 @@ USB_CONN_D-
 Text GLabel 9400 4625 0    50   Input ~ 0
 USB_CONN_D-
 $Comp
-L power:+5V #PWR038
-U 1 1 61FA3FDE
-P 9800 4125
-F 0 "#PWR038" H 9800 3975 50  0001 C CNN
-F 1 "+5V" H 9815 4298 50  0000 C CNN
-F 2 "" H 9800 4125 50  0001 C CNN
-F 3 "" H 9800 4125 50  0001 C CNN
-	1    9800 4125
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR039
 U 1 1 61FA474D
 P 9800 4925
@@ -1085,17 +1074,6 @@ NoConn ~ 7800 4925
 NoConn ~ 7800 5025
 Text Notes 6300 5375 0    50   ~ 0
 The shield is\ngrounded at \nthe host.
-$Comp
-L power:+5V #PWR036
-U 1 1 61F5C05B
-P 8450 3775
-F 0 "#PWR036" H 8450 3625 50  0001 C CNN
-F 1 "+5V" H 8465 3948 50  0000 C CNN
-F 2 "" H 8450 3775 50  0001 C CNN
-F 3 "" H 8450 3775 50  0001 C CNN
-	1    8450 3775
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8450 3825 8450 3775
 $Comp
@@ -1157,17 +1135,6 @@ Text Notes 9250 3825 0    50   ~ 0
 Push spikes >5V up the ladder \nand shunt down to ground.\n(at least I think that's how it works)
 Wire Wire Line
 	1450 4100 1450 4325
-$Comp
-L power:+5V #PWR0101
-U 1 1 62154291
-P 950 1250
-F 0 "#PWR0101" H 950 1100 50  0001 C CNN
-F 1 "+5V" H 965 1423 50  0000 C CNN
-F 2 "" H 950 1250 50  0001 C CNN
-F 3 "" H 950 1250 50  0001 C CNN
-	1    950  1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3350 1350 3500 1350
 Wire Wire Line
@@ -1366,20 +1333,16 @@ Wire Notes Line
 $Comp
 L Device:Polyfuse_Small F1
 U 1 1 61DD20B4
-P 1275 1350
-F 0 "F1" V 1100 1350 50  0000 C CNN
-F 1 "500mA" V 1175 1350 50  0000 C CNN
-F 2 "Fuse:Fuse_0603_1608Metric" H 1325 1150 50  0001 L CNN
-F 3 "~" H 1275 1350 50  0001 C CNN
-	1    1275 1350
+P 1225 1350
+F 0 "F1" V 1050 1350 50  0000 C CNN
+F 1 "500mA" V 1125 1350 50  0000 C CNN
+F 2 "Fuse:Fuse_0603_1608Metric" H 1275 1150 50  0001 L CNN
+F 3 "~" H 1225 1350 50  0001 C CNN
+	1    1225 1350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	950  1350 1175 1350
-Wire Wire Line
-	1375 1350 1575 1350
-Wire Wire Line
-	2175 1350 2900 1350
+	950  1350 1125 1350
 $Comp
 L Device:Ferrite_Bead_Small FB2
 U 1 1 6197F29F
@@ -1828,4 +1791,57 @@ Wire Wire Line
 Wire Wire Line
 	8225 4125 8450 4125
 Connection ~ 8450 4125
+$Comp
+L power:VBUS #PWR?
+U 1 1 622DE4DA
+P 950 1250
+F 0 "#PWR?" H 950 1100 50  0001 C CNN
+F 1 "VBUS" H 965 1423 50  0000 C CNN
+F 2 "" H 950 1250 50  0001 C CNN
+F 3 "" H 950 1250 50  0001 C CNN
+	1    950  1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2475 1350
+Wire Wire Line
+	2475 1250 2475 1350
+$Comp
+L power:+5V #PWR0101
+U 1 1 62154291
+P 2475 1250
+F 0 "#PWR0101" H 2475 1100 50  0001 C CNN
+F 1 "+5V" H 2490 1423 50  0000 C CNN
+F 2 "" H 2475 1250 50  0001 C CNN
+F 3 "" H 2475 1250 50  0001 C CNN
+	1    2475 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1325 1350 1575 1350
+Wire Wire Line
+	2175 1350 2475 1350
+Wire Wire Line
+	2475 1350 2900 1350
+$Comp
+L power:VBUS #PWR?
+U 1 1 6231A1B8
+P 8450 3775
+F 0 "#PWR?" H 8450 3625 50  0001 C CNN
+F 1 "VBUS" H 8465 3948 50  0000 C CNN
+F 2 "" H 8450 3775 50  0001 C CNN
+F 3 "" H 8450 3775 50  0001 C CNN
+	1    8450 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 6231BA00
+P 9800 4125
+F 0 "#PWR?" H 9800 3975 50  0001 C CNN
+F 1 "VBUS" H 9815 4298 50  0000 C CNN
+F 2 "" H 9800 4125 50  0001 C CNN
+F 3 "" H 9800 4125 50  0001 C CNN
+	1    9800 4125
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
