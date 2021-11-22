@@ -1250,15 +1250,13 @@ USB_CONN_D+
 Text Notes 7300 5050 0    50   ~ 0
 "Supporting Type-C from an existing USB2.0 design is straightforward and cheap \n(except for the connector). Basically you tie the DP pins together, tie the DM pins \ntogether, and add one pull-down resistor to each CC pin. This new Type-C device \nwill identify as a data and power sink, use the default USB2.0 power of 500 mA, \nand work in either orientation of the plug."
 Wire Wire Line
-	7650 3350 7700 3350
+	7650 3350 7750 3350
 Wire Wire Line
-	7650 3450 7700 3450
+	7650 3450 7750 3450
 Wire Wire Line
-	7900 3350 8300 3350
+	8075 3350 8300 3350
 Wire Wire Line
 	8300 3350 8300 3450
-Wire Wire Line
-	8300 3450 7900 3450
 $Comp
 L power:GND #PWR037
 U 1 1 61FCA231
@@ -1270,7 +1268,6 @@ F 3 "" H 8300 3450 50  0001 C CNN
 	1    8300 3450
 	1    0    0    -1  
 $EndComp
-Connection ~ 8300 3450
 Wire Wire Line
 	7700 3750 7650 3750
 Wire Wire Line
@@ -1299,12 +1296,12 @@ Wire Wire Line
 $Comp
 L Device:R_Small R11
 U 1 1 61FB8501
-P 7800 3350
-F 0 "R11" V 7750 3500 50  0000 C CNN
-F 1 "5.1k" V 7700 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 7800 3350 50  0001 C CNN
-F 3 "~" H 7800 3350 50  0001 C CNN
-	1    7800 3350
+P 7975 3350
+F 0 "R11" V 7925 3500 50  0000 C CNN
+F 1 "5.1k" V 7875 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7975 3350 50  0001 C CNN
+F 3 "~" H 7975 3350 50  0001 C CNN
+	1    7975 3350
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1402,17 +1399,6 @@ F 2 "Resistor_SMD:R_0402_1005Metric" H 4650 2900 50  0001 C CNN
 F 3 "~" H 4650 2900 50  0001 C CNN
 	1    4650 2900
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R12
-U 1 1 61FB9709
-P 7800 3450
-F 0 "R12" V 7850 3600 50  0000 C CNN
-F 1 "5.1k" V 7900 3450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 7800 3450 50  0001 C CNN
-F 3 "~" H 7800 3450 50  0001 C CNN
-	1    7800 3450
-	0    1    1    0   
 $EndComp
 Text Notes 7750 4400 0    50   ~ 0
 USB2.0 cables don't\nconnect to SBU, so \nwe can leave it floating.
@@ -1852,4 +1838,9 @@ Wire Wire Line
 Connection ~ 10125 6350
 Wire Wire Line
 	10125 6350 10125 6400
+Wire Wire Line
+	7750 3350 7750 3450
+Connection ~ 7750 3350
+Wire Wire Line
+	7750 3350 7875 3350
 $EndSCHEMATC

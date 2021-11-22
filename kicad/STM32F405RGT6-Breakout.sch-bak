@@ -1250,15 +1250,15 @@ USB_CONN_D+
 Text Notes 7300 5050 0    50   ~ 0
 "Supporting Type-C from an existing USB2.0 design is straightforward and cheap \n(except for the connector). Basically you tie the DP pins together, tie the DM pins \ntogether, and add one pull-down resistor to each CC pin. This new Type-C device \nwill identify as a data and power sink, use the default USB2.0 power of 500 mA, \nand work in either orientation of the plug."
 Wire Wire Line
-	7650 3350 7700 3350
+	7650 3350 7750 3350
 Wire Wire Line
-	7650 3450 7700 3450
+	7650 3450 7750 3450
 Wire Wire Line
-	7900 3350 8300 3350
+	8075 3350 8300 3350
 Wire Wire Line
 	8300 3350 8300 3450
 Wire Wire Line
-	8300 3450 7900 3450
+	8300 3450 8075 3450
 $Comp
 L power:GND #PWR037
 U 1 1 61FCA231
@@ -1299,12 +1299,12 @@ Wire Wire Line
 $Comp
 L Device:R_Small R11
 U 1 1 61FB8501
-P 7800 3350
-F 0 "R11" V 7750 3500 50  0000 C CNN
-F 1 "5.1k" V 7700 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 7800 3350 50  0001 C CNN
-F 3 "~" H 7800 3350 50  0001 C CNN
-	1    7800 3350
+P 7975 3350
+F 0 "R11" V 7925 3500 50  0000 C CNN
+F 1 "5.1k" V 7875 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7975 3350 50  0001 C CNN
+F 3 "~" H 7975 3350 50  0001 C CNN
+	1    7975 3350
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1406,12 +1406,12 @@ $EndComp
 $Comp
 L Device:R_Small R12
 U 1 1 61FB9709
-P 7800 3450
-F 0 "R12" V 7850 3600 50  0000 C CNN
-F 1 "5.1k" V 7900 3450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 7800 3450 50  0001 C CNN
-F 3 "~" H 7800 3450 50  0001 C CNN
-	1    7800 3450
+P 7975 3450
+F 0 "R12" V 8025 3600 50  0000 C CNN
+F 1 "5.1k" V 8075 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7975 3450 50  0001 C CNN
+F 3 "~" H 7975 3450 50  0001 C CNN
+	1    7975 3450
 	0    1    1    0   
 $EndComp
 Text Notes 7750 4400 0    50   ~ 0
@@ -1531,23 +1531,23 @@ Quad\nSPI\nnot\nused
 $Comp
 L power:GND #PWR0104
 U 1 1 619AB58F
-P 10325 6450
-F 0 "#PWR0104" H 10325 6200 50  0001 C CNN
-F 1 "GND" H 10325 6300 50  0000 C CNN
-F 2 "" H 10325 6450 50  0001 C CNN
-F 3 "" H 10325 6450 50  0001 C CNN
-	1    10325 6450
+P 10375 6475
+F 0 "#PWR0104" H 10375 6225 50  0001 C CNN
+F 1 "GND" H 10375 6325 50  0000 C CNN
+F 2 "" H 10375 6475 50  0001 C CNN
+F 3 "" H 10375 6475 50  0001 C CNN
+	1    10375 6475
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small R17
 U 1 1 6199FF9F
-P 10225 6350
-F 0 "R17" V 10300 6275 50  0000 L CNN
-F 1 "10k" V 10150 6275 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 10225 6350 50  0001 C CNN
-F 3 "~" H 10225 6350 50  0001 C CNN
-	1    10225 6350
+P 10275 6350
+F 0 "R17" V 10350 6275 50  0000 L CNN
+F 1 "10k" V 10200 6275 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 10275 6350 50  0001 C CNN
+F 3 "~" H 10275 6350 50  0001 C CNN
+	1    10275 6350
 	0    1    1    0   
 $EndComp
 Wire Notes Line
@@ -1844,10 +1844,20 @@ Wire Wire Line
 Wire Wire Line
 	10075 6400 10125 6400
 Wire Wire Line
+	10375 6350 10375 6475
+Wire Wire Line
 	10125 6300 10125 6350
 Wire Wire Line
-	10325 6350 10325 6450
+	10125 6350 10175 6350
 Connection ~ 10125 6350
 Wire Wire Line
 	10125 6350 10125 6400
+Wire Wire Line
+	7750 3350 7750 3450
+Connection ~ 7750 3350
+Wire Wire Line
+	7750 3350 7875 3350
+Connection ~ 7750 3450
+Wire Wire Line
+	7750 3450 7875 3450
 $EndSCHEMATC
