@@ -573,16 +573,16 @@ NRST
 Wire Wire Line
 	1000 5900 1000 6050
 Wire Wire Line
-	1150 5900 1000 5900
+	1025 5900 1000 5900
 $Comp
 L Device:LED_Small D3
 U 1 1 61A9A358
-P 1250 5900
-F 0 "D3" H 1250 6135 50  0000 C CNN
-F 1 "Red" H 1250 6044 50  0000 C CNN
-F 2 "Diode_SMD:D_0603_1608Metric" V 1250 5900 50  0001 C CNN
-F 3 "~" V 1250 5900 50  0001 C CNN
-	1    1250 5900
+P 1125 5900
+F 0 "D3" H 1125 6025 50  0000 C CNN
+F 1 "Red" H 1125 5825 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric" V 1125 5900 50  0001 C CNN
+F 3 "~" V 1125 5900 50  0001 C CNN
+	1    1125 5900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -792,30 +792,16 @@ NoConn ~ 3300 6300
 NoConn ~ 3300 6200
 NoConn ~ 3300 5900
 NoConn ~ 3300 5800
-NoConn ~ 3300 5500
-NoConn ~ 3300 5400
 NoConn ~ 3300 5200
-NoConn ~ 1900 6900
-NoConn ~ 1900 6800
-NoConn ~ 1900 6700
 NoConn ~ 1900 6600
 NoConn ~ 1900 6500
 NoConn ~ 1900 6400
 NoConn ~ 1900 6300
 NoConn ~ 1900 6200
-NoConn ~ 1900 5800
-NoConn ~ 1900 5700
-NoConn ~ 1900 5600
-NoConn ~ 1900 5500
-NoConn ~ 1900 5400
 NoConn ~ 1900 5200
 NoConn ~ 3300 4700
 NoConn ~ 3300 4600
 NoConn ~ 3300 4500
-NoConn ~ 3300 4000
-NoConn ~ 3300 3900
-NoConn ~ 3300 3800
-NoConn ~ 3300 3700
 Text Notes 875  1775 0    50   ~ 0
 Off when gate is high,\ni.e. supply polarity \nis reversed
 Text GLabel 6850 1950 2    50   Input ~ 0
@@ -830,7 +816,7 @@ U 1 1 61C2CF63
 P 5550 2000
 F 0 "J5" H 5650 1900 50  0000 L CNN
 F 1 "SPI1" H 5650 2000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 5550 2000 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 5550 2000 50  0001 C CNN
 F 3 "~" H 5550 2000 50  0001 C CNN
 	1    5550 2000
 	-1   0    0    1   
@@ -1010,7 +996,7 @@ U 1 1 61DAC74A
 P 5550 1200
 F 0 "J6" H 5650 1100 50  0000 L CNN
 F 1 "I2C1" H 5650 1200 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 5550 1200 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 5550 1200 50  0001 C CNN
 F 3 "~" H 5550 1200 50  0001 C CNN
 	1    5550 1200
 	-1   0    0    1   
@@ -1021,7 +1007,7 @@ U 1 1 61DC0149
 P 6650 1200
 F 0 "J7" H 6750 1100 50  0000 L CNN
 F 1 "I2C2" H 6750 1200 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6650 1200 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6650 1200 50  0001 C CNN
 F 3 "~" H 6650 1200 50  0001 C CNN
 	1    6650 1200
 	-1   0    0    1   
@@ -1032,7 +1018,7 @@ U 1 1 61DD83D6
 P 6650 1950
 F 0 "J4" H 6750 1850 50  0000 L CNN
 F 1 "USART6" H 6750 1950 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6650 1950 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6650 1950 50  0001 C CNN
 F 3 "~" H 6650 1950 50  0001 C CNN
 	1    6650 1950
 	-1   0    0    1   
@@ -1056,7 +1042,7 @@ U 1 1 61D2526B
 P 8400 1150
 F 0 "J2" H 8500 1050 50  0000 C CNN
 F 1 "PWR OUT" H 8700 1150 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 8400 1150 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 8400 1150 50  0001 C CNN
 F 3 "~" H 8400 1150 50  0001 C CNN
 	1    8400 1150
 	-1   0    0    1   
@@ -1843,4 +1829,125 @@ Wire Wire Line
 Connection ~ 7750 3350
 Wire Wire Line
 	7750 3350 7875 3350
+Text GLabel 1900 5500 0    50   Input ~ 0
+GPIO_PC1
+Text GLabel 1900 5600 0    50   Input ~ 0
+GPIO_PC2
+Text GLabel 1900 5700 0    50   Input ~ 0
+GPIO_PC3
+Text GLabel 1900 5400 0    50   Input ~ 0
+GPIO_PC0
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 629AE825
+P 6825 5625
+F 0 "J8" H 6905 5617 50  0000 L CNN
+F 1 "Conn_01x04" H 6905 5526 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6825 5625 50  0001 C CNN
+F 3 "~" H 6825 5625 50  0001 C CNN
+	1    6825 5625
+	1    0    0    -1  
+$EndComp
+Text GLabel 6625 5625 0    50   Input ~ 0
+GPIO_PC1
+Text GLabel 6625 5725 0    50   Input ~ 0
+GPIO_PC2
+Text GLabel 6625 5825 0    50   Input ~ 0
+GPIO_PC3
+Text GLabel 6625 5525 0    50   Input ~ 0
+GPIO_PC0
+Text GLabel 1900 5800 0    50   Input ~ 0
+GPIO_PC4
+Text GLabel 1300 5650 0    50   Input ~ 0
+GPIO_PC5
+Wire Wire Line
+	1300 5650 1350 5650
+Wire Wire Line
+	1350 5650 1350 5900
+Connection ~ 1350 5900
+Wire Wire Line
+	1350 5900 1225 5900
+$Comp
+L Connector_Generic:Conn_01x04 J9
+U 1 1 629DD192
+P 6825 6050
+F 0 "J9" H 6905 6042 50  0000 L CNN
+F 1 "Conn_01x04" H 6905 5951 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6825 6050 50  0001 C CNN
+F 3 "~" H 6825 6050 50  0001 C CNN
+	1    6825 6050
+	1    0    0    -1  
+$EndComp
+Text GLabel 6625 6050 0    50   Input ~ 0
+GPIO_PC5
+Text GLabel 6625 6150 0    50   Input ~ 0
+GPIO_PB0
+Text GLabel 6625 6250 0    50   Input ~ 0
+GPIO_PB1
+Text GLabel 6625 5950 0    50   Input ~ 0
+GPIO_PC4
+Text GLabel 3300 5400 2    50   Input ~ 0
+GPIO_PB0
+Text GLabel 3300 5500 2    50   Input ~ 0
+GPIO_PB1
+$Comp
+L Connector_Generic:Conn_01x04 J10
+U 1 1 62A179BD
+P 6825 6475
+F 0 "J10" H 6905 6467 50  0000 L CNN
+F 1 "Conn_01x04" H 6905 6376 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6825 6475 50  0001 C CNN
+F 3 "~" H 6825 6475 50  0001 C CNN
+	1    6825 6475
+	1    0    0    -1  
+$EndComp
+Text GLabel 6625 6475 0    50   Input ~ 0
+GPIO_PA1
+Text GLabel 6625 6575 0    50   Input ~ 0
+GPIO_PA2
+Text GLabel 6625 6675 0    50   Input ~ 0
+GPIO_PA3
+Text GLabel 6625 6375 0    50   Input ~ 0
+GPIO_PA0
+Text GLabel 3300 3800 2    50   Input ~ 0
+GPIO_PA1
+Text GLabel 3300 3900 2    50   Input ~ 0
+GPIO_PA2
+Text GLabel 3300 4000 2    50   Input ~ 0
+GPIO_PA3
+Text GLabel 3300 3700 2    50   Input ~ 0
+GPIO_PA0
+$Comp
+L Connector_Generic:Conn_01x03 J11
+U 1 1 62A3C530
+P 6825 6900
+F 0 "J11" H 6905 6942 50  0000 L CNN
+F 1 "Conn_01x03" H 6905 6851 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical_SMD_Pin1Left" H 6825 6900 50  0001 C CNN
+F 3 "~" H 6825 6900 50  0001 C CNN
+	1    6825 6900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6625 6800 0    50   Input ~ 0
+GPIO_PC13
+Text GLabel 6625 6900 0    50   Input ~ 0
+GPIO_PC14
+Text GLabel 6625 7000 0    50   Input ~ 0
+GPIO_PC15
+Text GLabel 1900 6700 0    50   Input ~ 0
+GPIO_PC13
+Text GLabel 1900 6800 0    50   Input ~ 0
+GPIO_PC14
+Text GLabel 1900 6900 0    50   Input ~ 0
+GPIO_PC15
+Wire Notes Line
+	8075 5425 6100 5425
+Wire Notes Line
+	8075 5425 8075 7100
+Wire Notes Line
+	6100 7100 8075 7100
+Wire Notes Line
+	6100 5425 6100 7100
+Text Notes 6100 5375 0    50   ~ 0
+GPIO breakout headers
 $EndSCHEMATC
