@@ -543,7 +543,7 @@ U 1 1 61A3C8B7
 P 8700 2900
 F 0 "J3" H 8750 3200 50  0000 C CNN
 F 1 "SWD/JTAG" H 8750 2600 50  0000 C CNN
-F 2 "Connector_PinSocket_1.27mm:PinSocket_2x05_P1.27mm_Vertical_SMD" H 8700 2900 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 8700 2900 50  0001 C CNN
 F 3 "~" H 8700 2900 50  0001 C CNN
 	1    8700 2900
 	1    0    0    -1  
