@@ -652,10 +652,6 @@ Text GLabel 3300 6000 2    50   Input ~ 0
 I2C1_SCL
 Text GLabel 3300 6100 2    50   Input ~ 0
 I2C1_SDA
-Text GLabel 3300 6400 2    50   Input ~ 0
-I2C2_SCL
-Text GLabel 3300 6500 2    50   Input ~ 0
-I2C2_SDA
 Text GLabel 1900 6000 0    50   Input ~ 0
 USART6_TX
 Text GLabel 1900 6100 0    50   Input ~ 0
@@ -863,7 +859,7 @@ U 1 1 61D58BCA
 P 9950 1550
 F 0 "H3" V 9904 1700 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1700 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 9950 1550 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1550 50  0001 C CNN
 F 3 "~" H 9950 1550 50  0001 C CNN
 	1    9950 1550
 	0    1    1    0   
@@ -874,7 +870,7 @@ U 1 1 61D59E0B
 P 9950 1750
 F 0 "H4" V 9904 1900 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1900 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 9950 1750 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1750 50  0001 C CNN
 F 3 "~" H 9950 1750 50  0001 C CNN
 	1    9950 1750
 	0    1    1    0   
@@ -885,7 +881,7 @@ U 1 1 61D5B66E
 P 9950 1350
 F 0 "H2" V 9904 1500 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1500 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 9950 1350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1350 50  0001 C CNN
 F 3 "~" H 9950 1350 50  0001 C CNN
 	1    9950 1350
 	0    1    1    0   
@@ -896,7 +892,7 @@ U 1 1 61D5B849
 P 9950 1150
 F 0 "H1" V 9904 1300 50  0000 L CNN
 F 1 "MountingHole_Pad" V 9995 1300 50  0000 L CNN
-F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 9950 1150 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1150 50  0001 C CNN
 F 3 "~" H 9950 1150 50  0001 C CNN
 	1    9950 1150
 	0    1    1    0   
@@ -1133,54 +1129,6 @@ Wire Notes Line
 	6250 3525 10900 3525
 Text Notes 6250 3475 0    50   ~ 0
 USB-C (USB2.0)
-$Comp
-L Device:R_Small R6
-U 1 1 61C15D39
-P 5400 2900
-F 0 "R6" H 5459 2946 50  0000 L CNN
-F 1 "2.2k" H 5459 2855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 5400 2900 50  0001 C CNN
-F 3 "~" H 5400 2900 50  0001 C CNN
-	1    5400 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R5
-U 1 1 61C15D43
-P 5100 2900
-F 0 "R5" H 5159 2946 50  0000 L CNN
-F 1 "2.2k" H 5159 2855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 5100 2900 50  0001 C CNN
-F 3 "~" H 5100 2900 50  0001 C CNN
-	1    5100 2900
-	1    0    0    -1  
-$EndComp
-Text GLabel 5100 3000 3    50   Input ~ 0
-I2C2_SCL
-Text GLabel 5400 3000 3    50   Input ~ 0
-I2C2_SDA
-$Comp
-L power:+3V3 #PWR018
-U 1 1 61C21E76
-P 5100 2800
-F 0 "#PWR018" H 5100 2650 50  0001 C CNN
-F 1 "+3V3" H 5115 2973 50  0000 C CNN
-F 2 "" H 5100 2800 50  0001 C CNN
-F 3 "" H 5100 2800 50  0001 C CNN
-	1    5100 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR021
-U 1 1 61C2221C
-P 5400 2800
-F 0 "#PWR021" H 5400 2650 50  0001 C CNN
-F 1 "+3V3" H 5415 2973 50  0000 C CNN
-F 2 "" H 5400 2800 50  0001 C CNN
-F 3 "" H 5400 2800 50  0001 C CNN
-	1    5400 2800
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	5650 2550 5650 3450
 $Comp
@@ -1659,7 +1607,7 @@ U 1 1 61A62F95
 P 5475 1400
 F 0 "J2" H 5450 1825 50  0000 L CNN
 F 1 "Uno Power" H 5250 875 50  0000 L CNN
-F 2 "" H 5475 1400 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical_SMD_Pin1Left" H 5475 1400 50  0001 C CNN
 F 3 "~" H 5475 1400 50  0001 C CNN
 	1    5475 1400
 	-1   0    0    -1  
@@ -1670,7 +1618,7 @@ U 1 1 61A67EFB
 P 7475 1375
 F 0 "J6" H 7425 1800 50  0000 L CNN
 F 1 "Uno Digital 1" H 7200 875 50  0000 L CNN
-F 2 "" H 7475 1375 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical_SMD_Pin1Left" H 7475 1375 50  0001 C CNN
 F 3 "~" H 7475 1375 50  0001 C CNN
 	1    7475 1375
 	-1   0    0    -1  
@@ -1681,7 +1629,7 @@ U 1 1 61A6AF8A
 P 6550 1300
 F 0 "J4" H 6525 1625 50  0000 L CNN
 F 1 "Uno Analog" H 6350 900 50  0000 L CNN
-F 2 "" H 6550 1300 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical_SMD_Pin1Left" H 6550 1300 50  0001 C CNN
 F 3 "~" H 6550 1300 50  0001 C CNN
 	1    6550 1300
 	-1   0    0    -1  
@@ -1762,7 +1710,7 @@ U 1 1 61A66A1D
 P 8375 1475
 F 0 "J5" H 8350 2000 50  0000 L CNN
 F 1 "Uno Digital 2" H 8125 850 50  0000 L CNN
-F 2 "" H 8375 1475 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left" H 8375 1475 50  0001 C CNN
 F 3 "~" H 8375 1475 50  0001 C CNN
 	1    8375 1475
 	-1   0    0    -1  
@@ -1824,43 +1772,6 @@ Text GLabel 7675 1075 2    50   Input ~ 0
 GPIO_PC5
 Text GLabel 7675 1175 2    50   Input ~ 0
 GPIO_PC4
-$Comp
-L power:GND #PWR032
-U 1 1 61E55AA2
-P 6250 3050
-F 0 "#PWR032" H 6250 2800 50  0001 C CNN
-F 1 "GND" H 6400 3000 50  0000 C CNN
-F 2 "" H 6250 3050 50  0001 C CNN
-F 3 "" H 6250 3050 50  0001 C CNN
-	1    6250 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR031
-U 1 1 61E54E72
-P 6250 2750
-F 0 "#PWR031" H 6250 2600 50  0001 C CNN
-F 1 "+3V3" H 6400 2850 50  0000 C CNN
-F 2 "" H 6250 2750 50  0001 C CNN
-F 3 "" H 6250 2750 50  0001 C CNN
-	1    6250 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J7
-U 1 1 61DC0149
-P 6050 2950
-F 0 "J7" H 6025 2650 50  0000 L CNN
-F 1 "I2C2" H 5975 3175 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 6050 2950 50  0001 C CNN
-F 3 "~" H 6050 2950 50  0001 C CNN
-	1    6050 2950
-	-1   0    0    1   
-$EndComp
-Text GLabel 6250 2850 2    50   Input ~ 0
-I2C2_SDA
-Text GLabel 6250 2950 2    50   Input ~ 0
-I2C2_SCL
 NoConn ~ 1900 6700
 NoConn ~ 1900 6800
 NoConn ~ 1900 6900
@@ -1906,4 +1817,6 @@ F 3 "" H 5275 3875 50  0001 C CNN
 	1    5275 3875
 	1    0    0    -1  
 $EndComp
+NoConn ~ 3300 6400
+NoConn ~ 3300 6500
 $EndSCHEMATC

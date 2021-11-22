@@ -1,4 +1,4 @@
-19407917519097130
+19409555126432456
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44491,6 +44491,13 @@ USB C Type-C Receptacle SMD
 0
 20
 17
+Connector_USB
+USB_C_Receptacle_XKB_U262-16XN-4BVC11_DRC_FRIENDLY_PADS
+USB Type C, right-angle, SMT, https://datasheet.lcsc.com/szlcsc/1811141824_XKB-Enterprise-U262-161N-4BVC11_C319148.pdf
+USB C Type-C Receptacle SMD
+0
+16
+13
 Connector_USB
 USB_Micro-AB_Molex_47590-0001
 Micro USB AB receptable, right-angle inverted (https://www.molex.com/pdm_docs/sd/475900001_sd.pdf)
